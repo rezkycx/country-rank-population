@@ -4,7 +4,7 @@ import Template from "../components/Template";
 import ComparisonPage from "../components/CountryComparison";
 import CountryComparisonForm from "../components/CountryComparisonForm";
 import Error404 from "../pages/Error404";
-import Home from "../pages/home";
+import Home from "../pages/Home";
 import News from "../pages/News";
 
 
