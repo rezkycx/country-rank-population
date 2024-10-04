@@ -36,7 +36,7 @@ export default function News() {
                         );  
                     })  
                 ) : (  
-                    <div className="text-center">No articles available.</div>  
+                    <div className="text-center">loading...</div>  
                 )}  
             </div>  
         </div>  

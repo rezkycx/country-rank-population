@@ -1,7 +1,9 @@
 //src/routes/router.jsx
 import { createBrowserRouter } from "react-router-dom";
-import BaseLayout from "../components/BaseLayout.JSX";
-import Comparision from "../pages/Comparision";
+import Template from "../components/Template";
+import ComparisonPage from "../components/CountryComparison";
+import CountryComparisonForm from "../components/CountryComparisonForm";
+import Error404 from "../pages/Error404";
 import Home from "../pages/home";
 import News from "../pages/News";
 
@@ -9,15 +11,20 @@ import News from "../pages/News";
 export const router  = createBrowserRouter([
     {
         path: "/",
-        element: <BaseLayout />,
+        element: <Template />,
+        errorElement: <Error404 />,
         children: [
             {
                 path: "",
                 element: <Home />
             },
             {
-                path: "comparision",
-                element: <Comparision />
+                path: "compare",
+                element: <CountryComparisonForm />
+            },
+            {
+                path: "compare/:page1/n/:page2",
+                element: <ComparisonPage  />
             },
             {
                 path: "news",

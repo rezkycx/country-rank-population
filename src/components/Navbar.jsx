@@ -12,7 +12,7 @@ export default function Navbar() {
                         <Link to="/" className="text-white hover:text-gray-300 transition duration-300">Home</Link>
                     </li>
                     <li>
-                        <Link to="/comparision" className="text-white hover:text-gray-300 transition duration-300">Comparision</Link>
+                        <Link to="/compare" className="text-white hover:text-gray-300 transition duration-300">Compare Country</Link>
                     </li>
                     <li>
                         <Link to="/news" className="text-white hover:text-gray-300 transition duration-300">News</Link>

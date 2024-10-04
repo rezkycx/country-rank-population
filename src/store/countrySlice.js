@@ -28,7 +28,15 @@ export const countrySlice = createSlice({
     data: [],
   },
   reducers: {
-    
+    compareCountries: (state, action) => {
+      const country1 = state.data.find(
+        (country) => country.name.common === action.payload.country1
+      )
+      const country2 = state.data.find(
+        (country) => country.name.common === action.payload.country2
+      )
+      state.comparison = { country1, country2 }
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchCountries.fulfilled, (state, action) => {
