@@ -1,45 +1,51 @@
-// src/pages/ComparisonPage.jsx
-import React from "react"
-import { useSelector } from "react-redux"
+// import React, { useEffect, useState } from "react"
+// import { useNavigate } from "react-router-dom"
 
-const ComparisonPage = () => {
-  const comparison = useSelector((state) => state.countries.comparison)
+// const ComparisonPage = () => {
+//   const [comparison, setComparison] = useState(null)
+//   const navigate = useNavigate()
 
-  if (!comparison) return <p>Please select countries to compare.</p>
+//   useEffect(() => {
+//     // Retrieve comparison data from localStorage
+//     const storedComparisonData = localStorage.getItem("comparisonData")
+//     if (storedComparisonData) {
+//       setComparison(JSON.parse(storedComparisonData))
+//     } else {
+//       // If no comparison data is found, redirect to the comparison form
+//       navigate("compare")
+//     }
+//   }, [navigate])
 
-  return (
-    <div className="max-w-4xl mx-auto bg-slate-400 p-8 rounded-lg shadow-md mt-8">
-      <h2 className="text-3xl font-bold text-center mb-6">
-        Country Comparison
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="bg-slate-400 p-6 rounded-lg shadow-md">
-          <h3 className="text-2xl font-bold mb-4">
-            {comparison.country1.name.common}
-          </h3>
-          <p>
-            <strong>Population:</strong>{" "}
-            {comparison.country1.population.toLocaleString()}
-          </p>
-          <p>
-            <strong>Region:</strong> {comparison.country1.region}
-          </p>
-        </div>
-        <div className="bg-slate-400 p-6 rounded-lg shadow-md">
-          <h3 className="text-2xl font-bold mb-4">
-            {comparison.country2.name.common}
-          </h3>
-          <p>
-            <strong>Population:</strong>{" "}
-            {comparison.country2.population.toLocaleString()}
-          </p>
-          <p>
-            <strong>Region:</strong> {comparison.country2.region}
-          </p>
-        </div>
-      </div>
-    </div>
-  )
-}
+//   if (!comparison) return <p>Please select countries to compare.</p>
 
-export default ComparisonPage
+//   return (
+//     <div className="max-w-4xl mx-auto bg-slate-400 p-8 rounded-lg shadow-md mt-8">
+//       <h2 className="text-3xl font-bold text-center mb-6">Country Comparison</h2>
+//       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+//         <div className="bg-slate-400 p-6 rounded-lg shadow-md">
+//           <h3 className="text-2xl font-bold mb-4">{comparison.country1.name.common}</h3>
+//           <p>
+//             <strong>Population:</strong>{" "}
+//             {comparison.country1.population.toLocaleString()}
+//           </p>
+//           <p>
+//             <strong>Region:</strong> {comparison.country1.region}
+//           </p>
+//         </div>
+//         <div className="bg-slate-400 p-6 rounded-lg shadow-md">
+//           <h3 className="text-2xl font-bold mb-4">{comparison.country2.name.common}</h3>
+//           <p>
+//             <strong>Population:</strong>{" "}
+//             {comparison.country2.population.toLocaleString()}
+//           </p>
+//           <p>
+//             <strong>Region:</strong> {comparison.country2.region}
+//           </p>
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default ComparisonPage
+

@@ -50,6 +50,9 @@ const Home = () => {
                 <th className="border border-gray-300 px-2 sm:px-4 py-2 text-sm sm:text-base">
                   Code
                 </th>
+                <th className="border border-gray-300 px-2 sm:px-4 py-2 text-sm sm:text-base">
+                  Capital
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -74,6 +77,9 @@ const Home = () => {
                   <td className="border border-gray-300 px-4 py-2">
                     {country.cca2}
                   </td>
+                  <td className="border border-gray-300 px-4 py-2">
+                    {country.capital}
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -97,6 +103,7 @@ const Home = () => {
                   <h3 className="font-bold">{country.name.common}</h3>
                   <p>Population: {country.formattedPopulation}</p>
                   <p>Code: {country.cca2}</p>
+                  <p>Capital: {country.capital}</p>
                 </div>
               </div>
             </div>
